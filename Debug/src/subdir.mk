@@ -6,18 +6,21 @@
 CPP_SRCS += \
 ../src/Gomoku.cpp \
 ../src/TadCasilla.cpp \
+../src/TadJuego.cpp \
 ../src/TadTablero.cpp \
 ../src/entorno.cpp 
 
 CPP_DEPS += \
 ./src/Gomoku.d \
 ./src/TadCasilla.d \
+./src/TadJuego.d \
 ./src/TadTablero.d \
 ./src/entorno.d 
 
 OBJS += \
 ./src/Gomoku.o \
 ./src/TadCasilla.o \
+./src/TadJuego.o \
 ./src/TadTablero.o \
 ./src/entorno.o 
 
@@ -34,7 +37,7 @@ src/%.o: ../src/%.cpp src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/Gomoku.d ./src/Gomoku.o ./src/TadCasilla.d ./src/TadCasilla.o ./src/TadTablero.d ./src/TadTablero.o ./src/entorno.d ./src/entorno.o
+	-$(RM) ./src/Gomoku.d ./src/Gomoku.o ./src/TadCasilla.d ./src/TadCasilla.o ./src/TadJuego.d ./src/TadJuego.o ./src/TadTablero.d ./src/TadTablero.o ./src/entorno.d ./src/entorno.o
 
 .PHONY: clean-src
 

@@ -305,6 +305,8 @@ TipoTecla entornoLeerTecla ( ) {
 	TipoTecla tecla = TNada;
 	ALLEGRO_EVENT evento;
 
+
+
 	al_wait_for_event ( colaEventos, &evento );
 
 	if ( evento.type == ALLEGRO_EVENT_DISPLAY_CLOSE )

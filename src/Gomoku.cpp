@@ -7,12 +7,10 @@
 //============================================================================
 
 #include <iostream>
-#include "entorno.h"
+#include "TadJuego.h"
 
 using namespace std;
 
-
-//Test commit
 void ejemplo() {
 	string msg;
 	msg = " ";
@@ -39,21 +37,7 @@ void ejemplo() {
 		entornoMarcadorTurno(turno);
 
 
-		for (int i = 0; i < nLinea; i++) {
-			entornoPonerPieza(i, 10, 1);
-		}
-		entornoPausa(1);
-		for (int i = 0; i < nLinea; i++) {
-			entornoMarcarLinea(i, 10);
-		}
 
-		for (int j = 0; j < nLinea; j++) {
-			entornoPonerPieza(10, j, 0);
-		}
-		entornoPausa(1);
-		for (int j = 0; j < nLinea; j++) {
-			entornoMarcarLinea(10, j);
-		}
 
 		while (!salir) {
 			tecla = entornoLeerTecla();
@@ -134,7 +118,7 @@ void ejemplo() {
 }
 
 int main() {
+ejemplo();
 
-	ejemplo();
 	return 0;
 }

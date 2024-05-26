@@ -38,7 +38,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := GomokuBase
+BUILD_ARTIFACT_NAME := cincoenraya
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -49,19 +49,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: GomokuBase
+main-build: cincoenraya
 
 # Tool invocations
-GomokuBase: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+cincoenraya: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -no-pie -o "GomokuBase" $(OBJS) $(USER_OBJS) $(LIBS) -lallegro -lallegro_color -lallegro_font -lallegro_image -lallegro_primitives -lallegro_ttf
+	g++ -no-pie -o "cincoenraya" $(OBJS) $(USER_OBJS) $(LIBS) -lallegro -lallegro_color -lallegro_font -lallegro_image -lallegro_primitives -lallegro_ttf
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) GomokuBase
+	-$(RM) cincoenraya
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
