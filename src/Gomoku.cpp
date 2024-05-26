@@ -7,7 +7,7 @@
 //============================================================================
 
 #include <iostream>
-#include "TadJuego.h"
+#include "entorno.h"
 
 using namespace std;
 
@@ -133,9 +133,6 @@ void ejemplo() {
 
 int main() {
 
-
-	Juego ju;
-	iniciar(ju);
-
+	ejemplo();
 	return 0;
 }
